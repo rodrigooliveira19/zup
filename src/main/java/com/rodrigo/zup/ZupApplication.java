@@ -31,7 +31,7 @@ public class ZupApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		
-		Cliente c1 = new  Cliente(null, "oliveirarodrigo191@yahoo.com.br"); 
+		/*Cliente c1 = new  Cliente(null, "oliveirarodrigo191@yahoo.com.br"); 
 		Aposta a1 = new Aposta(null,c1); 
 		NumeroAposta n1 = new NumeroAposta(null,1,a1); 
 		NumeroAposta n2 = new NumeroAposta(null,2,a1); 
@@ -44,7 +44,7 @@ public class ZupApplication implements CommandLineRunner{
 		
 		this.clienteRepository.save(c1); 
 		this.apostaRepository.save(a1); 
-		this.numeroApostaRepository.saveAll(Arrays.asList(n1,n2,n3,n4,n5,n6)); 
+		this.numeroApostaRepository.saveAll(Arrays.asList(n1,n2,n3,n4,n5,n6)); */ 
 		
 		
 	}
