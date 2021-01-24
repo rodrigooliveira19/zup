@@ -20,7 +20,7 @@ public class NumeroAposta implements Serializable{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id; 
 	
-	private int numero; 
+	private String numero; 
 	
 	@JsonIgnore 
 	@ManyToOne
@@ -31,7 +31,7 @@ public class NumeroAposta implements Serializable{
 		
 	}
 
-	public NumeroAposta(Integer id, int numero, Aposta aposta) {
+	public NumeroAposta(Integer id, String numero, Aposta aposta) {
 		super();
 		this.id = id;
 		this.numero = numero;
@@ -46,11 +46,11 @@ public class NumeroAposta implements Serializable{
 		this.id = id;
 	}
 
-	public int getNumero() {
+	public String getNumero() {
 		return numero;
 	}
 
-	public void setNumero(int numero) {
+	public void setNumero(String numero) {
 		this.numero = numero;
 	}
 

@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.rodrigo.zup.domain.Cliente;
+import com.rodrigo.zup.domain.dto.ClienteNewApostaDTO;
 import com.rodrigo.zup.services.ClienteService;
 
 @RestController
@@ -26,5 +27,11 @@ public class ClienteResource {
 	public ResponseEntity<Cliente> findByEmail(@PathVariable String email) {
 		Cliente obj = service.findByEmail(email);
 		return ResponseEntity.ok().body(obj);
+	}
+	
+	@RequestMapping(value = "/{email}", method = RequestMethod.POST)
+	public ResponseEntity<ClienteNewApostaDTO> createBetByEmail(@PathVariable String email) {
+		ClienteNewApostaDTO obj =  service.createBetByEmail(email); 
+		return ResponseEntity.ok().body(obj); 
 	}
 }
